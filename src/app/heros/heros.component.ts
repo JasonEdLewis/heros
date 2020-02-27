@@ -11,14 +11,17 @@ import { Hero } from '../hero';
 export class HerosComponent implements OnInit {
 
   heroes = HEROES;
-
+  detailedHero:boolean;
   selectedHero: Hero;
 
   onSelect(hero:Hero):void{
-    this.selectedHero = hero
+    this.selectedHero = hero;
+    this.detailedHero = true
   }
   onChangeName($event){
-    this.selectedHero = $event
+    this.selectedHero = $event;
+    this.detailedHero = false
+
   }
 
   constructor() { }
