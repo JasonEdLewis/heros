@@ -4,6 +4,8 @@
     (click)="onSelect(hereo)"
     [class.selected]="hereo === selectedHero"
     >
+    <!-- Line 5: is saying "When the [hero] from line 3 - let [hero] is equal to the [selectedHero]- when that is true
+      turn the class on to .selected in the CSS" -->
       <span class="badge">{{hereo.id}}</span> {{hereo.name}}
     </li>
 </ul>
