@@ -30,8 +30,9 @@ export class HerosComponent implements OnInit {
   }
   // line 32: same function name from service file
   getHeroes():void{
-  // set the return value from the service file method - appended with the class name - to the initialized variable above
-    this.heroes = this.HeroService.getHeroes()
+
+  this.HeroService.getHeroes()
+  .subscribe(heroes => this.heroes = heroes)
   }
 
 /*  **Important step on line 38: [HeroService must be set here for use in this component].
