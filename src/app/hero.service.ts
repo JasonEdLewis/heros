@@ -10,7 +10,7 @@ import { Observable, of } from 'rxjs';
 export class HeroService {
 
   getHeroes(): Observable<Hero[]>{
-    this.MessageService.add('HeroService: fetched heroes')
+    this.MessageService.add('Hero Service: fetched heroes')
     return of (HEROES)
   }
   /*

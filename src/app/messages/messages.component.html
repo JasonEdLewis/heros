@@ -1,3 +1,8 @@
+<div>
+  <input type="text"  [(ngModel)]="newMessage" (keyup.enter)="addMessage()">
+  <button (click)="addMessage()">Add Message</button>
+</div>
+
 
 <div *ngIf="messageService.messages.length">
   <h2>Messages</h2>
