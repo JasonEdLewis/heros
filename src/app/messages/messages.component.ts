@@ -10,6 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
+  newMessage: string;
+  addMessage():void{
+    this.messageService.add(this.newMessage);
+    console.log(this.messageService.messages[1])
+    this.newMessage = ""
+  }
   constructor(public messageService: MessageService) { }
 
   ngOnInit(): void {
