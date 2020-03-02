@@ -13,6 +13,10 @@ export class heroeservice {
     this.MessageService.add('Hero Service: fetched heroes')
     return of (HEROES)
   }
+  getHero(id: number): Observable<Hero> {
+    this.MessageService.add(`HeroService: feteched hero id=${id}`);
+    return of (HEROES.find(hero => hero.id === id))
+  }
   /*
   lines 11 - 13 are the async, but exact, version of the method on lines 16 - 18
   getHeroes(): Hero[] {
